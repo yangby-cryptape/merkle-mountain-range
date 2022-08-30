@@ -1,0 +1,21 @@
+[package]
+name = "mmr-bug-finder"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+mmr_0_2 = { version = "=0.2.0", package = "ckb-merkle-mountain-range", optional = true }
+mmr_0_3 = { version = "=0.3.0", package = "ckb-merkle-mountain-range", optional = true }
+mmr_0_4 = { version = "=0.4.0", package = "ckb-merkle-mountain-range", optional = true }
+mmr_0_5 = { version = "=0.5.0", package = "ckb-merkle-mountain-range", optional = true }
+rusqlite = "0.28.0"
+log = "0.4.17"
+env_logger = "0.9.0"
+
+[features]
+default = []
+mmr_0_2 = ["dep:mmr_0_2"]
+mmr_0_3 = ["dep:mmr_0_3"]
+mmr_0_4 = ["dep:mmr_0_4"]
+mmr_0_5 = ["dep:mmr_0_5"]
+merge_left_to_right = []
